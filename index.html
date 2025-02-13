@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexboxt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <STRong>
+        <h1>SISTEMA DE CRIACAO FLEX</h1>
+    </STRong>
+</header>
+
+<body>
+
+    <section class="container">
+        <article class="item article-01">
+            </script>
+            <section>
+                <h1>SOMANDO VALORES</h1>
+                Introduza os valores: <input type="number" name="text1" id="text1"> +
+                <input type="number" name="text2" id="text2">
+                <input type="button" value="Somar" onclick="somar()">
+                <br>
+                <div id="res"></div>
+                <script>
+                    function somar() {
+                        var tn1 = window.document.getElementById('text1')
+                        var tn2 = window.document.querySelector('input#text2')
+                        var res = window.document.getElementById('res')
+                        var n1 = Number(tn1.value)
+                        var n2 = Number(tn2.value)
+                        var s = n1 + n2
+                        res.innerHTML = `A soma de ${n1} e ${n2} e igual a <strong>${s}</strong>`
+                    }
+                </script>
+            </section>
+        </article>
+        <article class="item article-02">
+            <section>
+                <h1>SISTEMA DE MULTAS</h1>
+                Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+                <input type="button" value="verificar" onclick="calcular()">
+
+                <div id="ressistema">
+
+
+                </div>
+
+                <script>
+                    function calcular() {
+                        var txtv = window.document.querySelector('input#txtvel')
+                        var res = window.document.querySelector('div#ressistema')
+                        var vel = Number(txtv.value)
+                        res.innerHTML = ` <p> Sua velocidade atual e de <strong>${vel}Km/h</strong> `
+                        if (vel > 60) {
+                            res.innerHTML += `<p>Voce esta <b>MULTADO</b> por excesso de velocidade</p>`
+                        }
+                        res.innerHTML += `Dirija sempre com cinto se seguranca`
+                    }
+                </script>
+            </section>
+        </article>
+        <article class="item article-03">
+            <section>
+                <h1>SISTEMA DE VERIFICAÇÃO DE NACIONALIDADE</h1>
+                <label for="pais">Nome do País:</label>
+                <input type="text" id="pais">
+                <input type="button" value="verificar" onclick="verificarNacionalidade()">
+
+                <div id="resultadoNacionalidade"></div>
+                <script>
+                    function verificarNacionalidade() {
+                        let pais = document.getElementById("pais").value.toLowerCase();
+                        let resultadoDiv = document.getElementById("resultadoNacionalidade");
+
+                        if (pais.includes("mozambi")) {
+                            resultadoDiv.innerHTML = `<p>Você é Mocambicano ✅</p>
+                                                      <p>Volte sempre para verificar sua nacionalidade!</p>`;
+                        } else {
+                            resultadoDiv.innerHTML = "<p>Nacionalidade não identificada. Por favor insira o Pais novamente</p>";
+                        }
+                    }
+                </script>
+
+            </section>
+        </article>
+        <article class="item article-01">
+            <section>
+                <h1>SISTEMA DE VERIFICAÇÃO DE IDADE</h1>
+                <label for="text1">Introduza a idade:</label>
+                <input type="number" id="text1" min="0">
+                <input type="button" value="verificar" onclick="calculando()">
+                <div id="resp"></div>
+                <script>
+                    function calculando() {
+                        var tn1 = window.document.getElementById('text1');
+                        var resultado = window.document.getElementById('resp');
+                        var n1 = Number(tn1.value);
+                        if (isNaN(n1) || n1 < 0) {
+                            resultado.innerHTML = `<p style="color: red;">Por favor, insira uma idade válida.</p>`;
+                            return;
+                        }
+                        if (n1 < 12) {
+                            resultado.innerHTML = `<p>Voce esta na faixa etaria de uma Crianca, nao tem idade para tirar carteira de Motorista❌ </p>`
+                        } else if (n1 < 18) {
+                            resultado.innerHTML = `<p>Voce esta na faixa etaria de uma Adolescente, nao tem idade para tirar carteira de Motorista ❌</p>`
+                        } else if (n1 < 40) {
+                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Jovem, ja pode tirar a carteira de Motorista ✅</p>`
+                        } else if (n1 < 50) {
+                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Adulto, ja pode tirar a carteira de Motorista ✅</p>`
+                        } else {
+                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Idoso, ja nao pode tirar a carteira de Motorista ❌</p>`
+                        }
+
+                    }
+                </script>
+            </section>
+        </article>
+        <article class="item article-02">Article 05</article>
+        <article class="item article-03">Article 06</article>
+
+
+    </section>
+</body>
+
+</html>

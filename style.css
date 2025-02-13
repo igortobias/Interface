@@ -1,0 +1,27 @@
+.container {
+    background-color: #ffea72;
+    height: 250px;
+     display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+.item {
+    background-color: #333;
+    color: #d86fdb;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+    flex-grow: 1;
+
+}
+body{
+background: #ffea72;
+
+}
+
+header {
+    background: rebeccapurple;
+}
