@@ -1,27 +1,97 @@
 .container {
-    background-color: #ffea72;
-    height: 250px;
-     display: flex; 
-    flex-direction: row;
+    background-color: #171618;
+    height: auto;
+    display: flex; 
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
-    align-content: stretch;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
 .item {
-    background-color: #333;
-    color: #d86fdb;
-    padding: 20px;
-    margin: 5px;
-    width: 200px;
-    flex-grow: 1;
-
+    background-color: #613737;
+    color: #fafafa;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    width: calc(50% - 20px); 
+    border-radius: 50px;
 }
+
+
 body{
-background: #ffea72;
+background: #9f84ff;
+margin-bottom: auto;
+/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'; */
+
 
 }
 
-header {
+/* header {
     background: rebeccapurple;
+    text-align: center;
+}   */
+/* section {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 650px;
+    box-shadow: 5px 5px 10px rgb(48, 48, 48);
+    margin-left: 15px;
+
+} */
+
+
+
+div#area {
+    background: rgb(84, 31, 134);
+    color: rgb(255, 255, 255);
+    font-weight: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+     margin-left: 15px;
+
+}
+button {
+    background: #0c0e07;
+    color: #fff5f5;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s, transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+} 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+} 
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
 }

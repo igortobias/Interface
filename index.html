@@ -6,36 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexboxt</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
 </head>
-<header>
-    <STRong>
-        <h1>SISTEMA DE CRIACAO FLEX</h1>
-    </STRong>
-</header>
+
 
 <body>
-
+    <div id=area>
+        <STRong>
+            <h3>CARDS CALCULATORS</h3>
+        </STRong>
+    </div>
     <section class="container">
         <article class="item article-01">
-            </script>
             <section>
-                <h1>SOMANDO VALORES</h1>
-                Introduza os valores: <input type="number" name="text1" id="text1"> +
-                <input type="number" name="text2" id="text2">
-                <input type="button" value="Somar" onclick="somar()">
-                <br>
-                <div id="res"></div>
-                <script>
-                    function somar() {
-                        var tn1 = window.document.getElementById('text1')
-                        var tn2 = window.document.querySelector('input#text2')
-                        var res = window.document.getElementById('res')
-                        var n1 = Number(tn1.value)
-                        var n2 = Number(tn2.value)
-                        var s = n1 + n2
-                        res.innerHTML = `A soma de ${n1} e ${n2} e igual a <strong>${s}</strong>`
-                    }
-                </script>
+                <div class="item">
+                    <h1>Mini-Calculadora</h1>
+                    <div class="converter"> Introduza valores:
+                        <div class="inputs">
+                            <input type="number" id="calcNum1" placeholder="Número 1">
+                            <input type="number" id="calcNum2" placeholder="Número 2">
+                        </div>
+                        <button onclick="calculate('add')">Somar</button>
+                        <button onclick="calculate('subtract')">Subtrair</button>
+                        <button onclick="calculate('multiply')">Multiplicar</button>
+                        <button onclick="calculate('divide')">Dividir</button>
+                        <div class="result" id="calcResult"></div>
+                    </div>
+                </div>
             </section>
         </article>
         <article class="item article-02">
@@ -96,34 +98,67 @@
                 <div id="resp"></div>
                 <script>
                     function calculando() {
-                        var tn1 = window.document.getElementById('text1');
-                        var resultado = window.document.getElementById('resp');
+                        var tn1 = document.getElementById('text1');
+                        var resultado = document.getElementById('resp');
                         var n1 = Number(tn1.value);
+
                         if (isNaN(n1) || n1 < 0) {
                             resultado.innerHTML = `<p style="color: red;">Por favor, insira uma idade válida.</p>`;
                             return;
                         }
-                        if (n1 < 12) {
-                            resultado.innerHTML = `<p>Voce esta na faixa etaria de uma Crianca, nao tem idade para tirar carteira de Motorista❌ </p>`
-                        } else if (n1 < 18) {
-                            resultado.innerHTML = `<p>Voce esta na faixa etaria de uma Adolescente, nao tem idade para tirar carteira de Motorista ❌</p>`
-                        } else if (n1 < 40) {
-                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Jovem, ja pode tirar a carteira de Motorista ✅</p>`
-                        } else if (n1 < 50) {
-                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Adulto, ja pode tirar a carteira de Motorista ✅</p>`
-                        } else {
-                            resultado.innerHTML = `<p>Voce esta na faixa etaria de um Idoso, ja nao pode tirar a carteira de Motorista ❌</p>`
-                        }
 
+                        if (n1 < 12) {
+                            resultado.innerHTML = `<p>Você está na faixa etária de uma criança e não pode tirar a carteira de motorista ❌</p>`;
+                        } else if (n1 < 18) {
+                            resultado.innerHTML = `<p>Você está na faixa etária de um adolescente e ainda não pode tirar a carteira de motorista ❌</p>`;
+                        } else if (n1 < 40) {
+                            resultado.innerHTML = `<p>Você está na faixa etária de um Jovem e tem idade suficiente para tirar a carteira de motorista ✅</p>`;
+                        } else if (n1 < 55) {
+                            resultado.innerHTML = `<p>Você está na faixa etária de um Adulto e tem idade suficiente para tirar a carteira de motorista ✅</p>`;
+                        } else {
+                            resultado.innerHTML = `<p>Você está na faixa etária de um Idoso e nao tem idade suficiente para tirar a carteira de motorista ❌</p>`;
+                        }
                     }
+
                 </script>
             </section>
         </article>
-        <article class="item article-02">Article 05</article>
-        <article class="item article-03">Article 06</article>
+        <article class="item article-05">
+            <header>
+                <h1>Verificador de Idade</h1>
+            </header>
+        
+            <section>
+                <div>
+                    <p>
+                        Ano de Nascimento:
+                        <input type="number" name="txtano" id="txtano" min="1900" max="2024">
+                    </p>
+                    <p>Sexo:
+                        <label for="mas"> Masculino</label>
+                        <input type="radio" name="radsex" id="mas" checked>
+                        <label for="fem">Feminino</label>
+                        <input type="radio" name="radsex" id="fem">
+                    </p>
+                    <p>
+                        <input type="button" value="Verificar" onclick="verifique()">
+                    </p>
+                </div>
+                <div id="res">
+                    Preencha os dados acima para ver o resultado!
+                </div>
+            </section>
+        
+        </article>
 
 
     </section>
+    <script src="script.js"></script>
+    
+    <footer>
+        <p>&copy; Igortobiaspumbe</p>
+    </footer>
+
 </body>
 
 </html>
